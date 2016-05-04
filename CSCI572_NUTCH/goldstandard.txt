@@ -1,0 +1,26 @@
+gun
+weapon
+firearm
+rifle
+pistol
+revolver
+shotgun
+carbine
+automatic
+handgun
+semiautomatic
+machine gun
+ammunition
+bomb
+cannon
+machete
+missile
+mortar
+blaster
+uzi
+sniper
+ak47
+glock
+machine guns
+
+

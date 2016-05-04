@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+ <property>
+        <name>http.agent.name</name>
+        <value>Team6</value>
+    </property>
+    
+    <property>
+        <name>http.agent.rotate</name>
+        <value>true</value>
+        <description>
+            If true, instead of http.agent.name, alternating agent names are
+            chosen from a list provided via http.agent.rotate.file.
+        </description>
+    </property>
+    
+    <property>
+        <name>http.agent.rotate.file</name>
+        <value>agents.txt</value>
+        <description>
+            File containing alternative user agent names to be used instead of
+            http.agent.name on a rotating basis if http.agent.rotate is true.
+            Each line of the file should contain exactly one agent
+            specification including name, version, description, URL, etc.
+        </description>
+    </property>
+    
+    <property>
+        <name>fetcher.threads.fetch</name>
+        <value>15</value>
+        <description>The number of FetcherThreads the fetcher should use.
+            This is also determines the maximum number of requests that are
+            made at once (each FetcherThread handles one connection). The total
+            number of threads running in distributed mode will be the number of
+            fetcher threads * number of nodes as fetcher has one map task per node.
+        </description>
+    </property>
+    
+    <property>
+        <name>db.max.outlinks.per.page</name>
+        <value>150</value>
+        <description>The maximum number of outlinks that we'll process for a page.
+            If this value is nonnegative (>=0), at most db.max.outlinks.per.page outlinks
+            will be processed for a page; otherwise, all outlinks will be processed.
+        </description>
+<property>
+    <name>scoring.similarity.model.path</name>
+    <value>goldstandard.txt</value>
+</property>
+
+<property>
+    <name>scoring.similarity.stopword.file</name>
+    <value>stopwords.txt</value>
+</property>
+<property>
+        <name>file.content.limit</name>
+        <value>6553600</value>
+        <description>The length limit for downloaded content using the file://
+            protocol, in bytes. If this value is nonnegative (>=0), content longer
+            than it will be truncated; otherwise, no truncation at all. Do not
+            confuse this setting with the http.content.limit setting.
+        </description>
+    </property>
+    <property>
+        <name>plugin.includes</name>
+        <value>protocol-http|protocol-interactiveselenium|urlfilter-regex|parse-(html|tika)|index-(basic|anchor)|urlnormalizer-(pass|regex|basic)|scoring-opic</value>
+        <description>Regular expression naming plugin directory names to
+            include.  Any plugin not matching this expression is excluded.
+            In any case you need at least include the nutch-extensionpoints plugin. By
+            default Nutch includes crawling just HTML and plain text via HTTP,
+            and basic indexing and search plugins. In order to use HTTPS please enable
+            protocol-httpclient, but be aware of possible intermittent problems with the
+            underlying commons-httpclient library.
+        </description>
+    </property>
+    <property>
+        <name>selenium.driver</name>
+        <value>firefox</value>
+        <description>
+            A String value representing the flavour of Selenium
+            WebDriver() to use. Currently the following options
+            exist - 'firefox', 'chrome', 'safari', 'opera' and 'remote'.
+            If 'remote' is used it is essential to also set correct properties for
+            'selenium.hub.port', 'selenium.hub.path', 'selenium.hub.host' and
+            'selenium.hub.protocol'.
+        </description>
+    </property>
+    
+    <property>
+        <name>selenium.take.screenshot</name>
+        <value>false</value>
+        <description>
+            Boolean property determining whether the protocol-selenium
+            WebDriver should capture a screenshot of the URL. If set to
+            true remember to define the 'selenium.screenshot.location'
+            property as this determines the location screenshots should be
+            persisted to on HDFS. If that property is not set, screenshots
+            are simply discarded.
+        </description>
+    </property>
+    
+    <property>
+        <name>selenium.screenshot.location</name>
+        <value></value>
+        <description>
+            The location on disk where a URL screenshot should be saved
+            to if the 'selenium.take.screenshot' proerty is set to true.
+            By default this is null, in this case screenshots held in memory
+            are simply discarded.
+        </description>
+    </property>
+    
+    <property>
+        <name>selenium.hub.port</name>
+        <value>4444</value>
+        <description>Selenium Hub Location connection port</description>
+    </property>
+    
+    <property>
+        <name>selenium.hub.path</name>
+        <value>/wd/hub</value>
+        <description>Selenium Hub Location connection path</description>
+    </property>
+    
+    <property>
+        <name>selenium.hub.host</name>
+        <value>localhost</value>
+        <description>Selenium Hub Location connection host</description>
+    </property>
+    
+    <property>
+        <name>selenium.hub.protocol</name>
+        <value>http</value>
+        <description>Selenium Hub Location connection protocol</description>
+    </property>
+    
+    <property>
+        <name>selenium.grid.driver</name>
+        <value>firefox</value>
+        <description>A String value representing the flavour of Selenium
+            WebDriver() used on the selenium grid. Currently the following options
+            exist - 'firefox' </description>
+    </property>
+    
+    <property>
+        <name>selenium.grid.binary</name>
+        <value></value>
+        <description>A String value representing the path to the browser binary
+            location for each node
+        </description>
+    </property>
+    
+    <property>
+        <name>libselenium.page.load.delay</name>
+        <value>3</value>
+        <description>
+            The delay in seconds to use when loading a page with lib-selenium. This
+            setting is used by protocol-selenium and protocol-interactiveselenium
+            since they depending on lib-selenium for fetching.
+        </description>
+    </property>
+    
+    <!-- protocol-interactiveselenium configuration -->
+    <property>
+        <name>interactiveselenium.handlers</name>
+        <value>Team6Handler,DefaultHandler</value>
+        <description>
+            A comma separated list of Selenium handlers that should be run for a given
+            URL. The DefaultHandler causes the same functionality as protocol-selenium.
+            Custom handlers can be implemented in the plugin package and included here.
+        </description>
+    </property>
+
+    </property>
+</configuration>

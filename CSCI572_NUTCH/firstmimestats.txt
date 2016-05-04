@@ -1,0 +1,44 @@
+Pranalis-MacBook-Air:local pranalijhaveri$ bin/nutch dump -outputDir ../../pranali/mimestats -segment /Users/pranalijhaveri/Desktop/nutch/pranali/outputcrawl13-10 -mimeStats
+Dumper File Stats:
+TOTAL Stats:
+[
+{"mimeType":"application/vnd.google-earth.kml+xml","count":"1"}
+{"mimeType":"video/x-ms-wmv","count":"1"}
+{"mimeType":"application/x-bzip2","count":"40"}
+{"mimeType":"audio/x-ms-wma","count":"1"}
+{"mimeType":"image/svg+xml","count":"17"}
+{"mimeType":"application/xhtml+xml","count":"26899"}
+{"mimeType":"application/octet-stream","count":"1077"}
+{"mimeType":"application/xml","count":"11"}
+{"mimeType":"image/png","count":"2407"}
+{"mimeType":"image/jpeg","count":"33981"}
+{"mimeType":"application/rss+xml","count":"38"}
+{"mimeType":"application/atom+xml","count":"11"}
+{"mimeType":"text/plain","count":"435"}
+{"mimeType":"image/gif","count":"594"}
+{"mimeType":"application/x-tika-ooxml","count":"1"}
+{"mimeType":"text/html","count":"64915"}
+{"mimeType":"application/pdf","count":"29"}
+]
+
+FILTERED Stats:
+[
+{"mimeType":"application/vnd.google-earth.kml+xml","count":"1"}
+{"mimeType":"video/x-ms-wmv","count":"1"}
+{"mimeType":"application/x-bzip2","count":"40"}
+{"mimeType":"audio/x-ms-wma","count":"1"}
+{"mimeType":"image/svg+xml","count":"17"}
+{"mimeType":"application/xhtml+xml","count":"26899"}
+{"mimeType":"application/octet-stream","count":"1077"}
+{"mimeType":"application/xml","count":"11"}
+{"mimeType":"image/png","count":"2407"}
+{"mimeType":"image/jpeg","count":"33981"}
+{"mimeType":"application/rss+xml","count":"38"}
+{"mimeType":"application/atom+xml","count":"11"}
+{"mimeType":"text/plain","count":"435"}
+{"mimeType":"image/gif","count":"594"}
+{"mimeType":"application/x-tika-ooxml","count":"1"}
+{"mimeType":"text/html","count":"64915"}
+{"mimeType":"application/pdf","count":"29"}
+]
+
